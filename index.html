@@ -3,24 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wedding Invitation</title>
+  <title>Raihana & Fahmie | 13 Mac 2027</title>
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <!-- ===== WHATSAPP / SOCIAL LINK PREVIEW (Open Graph) ===== -->
+  <meta property="og:title" content="Raihana & Fahmie | Wedding Invitation" />
+  <meta property="og:description" content="Dengan penuh kesyukuran, kami menjemput anda ke majlis perkahwinan kami. 13 Mac 2027." />
+  <meta property="og:image" content="assets/preview.jpg" />
+  <meta property="og:url" content="https://pippomie.github.io/test1/" />
+  <meta property="og:type" content="website" />
+
+  <!-- ===== FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Caveat:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts: soft + playful -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Caveat:wght@400;600&family=Nunito:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- ===== MUSIC TOGGLE (floating) ===== -->
+  <!-- Music button floating bottom-right -->
   <button id="musicBtn" class="music-btn" aria-label="Play music">🎵</button>
-  <audio id="bgMusic" loop>
-    <source src="" type="audio/aac" />
+  <audio id="bgMusic" loop preload="auto">
+    <source src="" type="audio/mpeg" />
   </audio>
 
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-content">
-      <p class="small script-label">The Wedding Of</p>
-      <h1 class="couple-names"><span id="groomName"></span><br/><span class="amp">&</span><br/><span id="brideName"></span></h1>
+      <p class="script-label">The Wedding Of</p>
+      <h1 class="couple-names">
+        <span id="groomName"></span>
+        <span class="amp">&</span>
+        <span id="brideName"></span>
+      </h1>
       <p class="hashtag" id="hashtag"></p>
       <p class="date-display" id="dateDisplay"></p>
       <button class="btn script-btn" id="musicPrompt">tekan untuk mainkan lagu</button>
@@ -34,7 +52,7 @@
     <p class="poem" id="poem"></p>
   </section>
 
-  <!-- ===== COUNTDOWN ===== -->
+  <!-- ===== COUNTDOWN + ADD TO CALENDAR ===== -->
   <section class="section countdown-section">
     <h2>Menghitung Hari</h2>
     <div class="countdown" id="countdown">
@@ -55,8 +73,8 @@
       <iframe id="mapEmbed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="btn-row">
-      <a class="btn" id="gmapsBtn" target="_blank">Google Maps</a>
-      <a class="btn" id="wazeBtn" target="_blank">Waze</a>
+      <a class="btn" id="gmapsBtn" target="_blank" rel="noopener">Google Maps</a>
+      <a class="btn" id="wazeBtn" target="_blank" rel="noopener">Waze</a>
     </div>
   </section>
 
@@ -66,7 +84,7 @@
     <ul class="schedule" id="scheduleList"></ul>
   </section>
 
-  <!-- ===== CONTACTS ===== -->
+  <!-- ===== CONTACTS (WhatsApp) ===== -->
   <section class="section contacts-section">
     <h2>Hubungi</h2>
     <div id="contactsList" class="contacts"></div>
